@@ -7,6 +7,9 @@
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.13"
   },
+  "devDependencies": {
+    "react-test-renderer": "15.6.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

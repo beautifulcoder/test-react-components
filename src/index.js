@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import FilterableGreatApeList from './FilterableGreatApeList';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const APES = [];
+
+ReactDOM.render(<FilterableGreatApeList apes={APES} />, document.getElementById('root'));
 registerServiceWorker();
