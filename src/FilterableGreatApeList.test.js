@@ -24,13 +24,14 @@ it('Renders with GreatApeSearchBar', () => {
   renderer.render(<FilterableGreatApeList apes={APES} />);
 
   // Act
-  const render = renderer.getRenderOutput();
-  const searchBar = render.props.children[0];
+  const component = renderer.getRenderOutput();
+  const searchBar = component.props.children[0];
 
   // Assert
   expect(searchBar).toBeDefined();
   expect(searchBar.type.name).toBe('GreatApeSearchBar');
   expect(searchBar.props.showExtantOnly).toBe(false);
+  expect(searchBar.props.onShowExtantOnlyInput).toBeDefined();
 });
 
 it('Renders with GreatApeList', () => {
@@ -39,8 +40,8 @@ it('Renders with GreatApeList', () => {
   renderer.render(<FilterableGreatApeList apes={APES} />);
 
   // Act
-  const render = renderer.getRenderOutput();
-  const apeList = render.props.children[1];
+  const component = renderer.getRenderOutput();
+  const apeList = component.props.children[1];
 
   // Assert
   expect(apeList).toBeDefined();

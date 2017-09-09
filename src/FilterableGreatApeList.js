@@ -10,6 +10,14 @@ class FilterableGreatApeList extends Component {
     this.state = {
       showExtantOnly: false
     };
+
+    this.handleShowExtantOnlyInput = this.handleShowExtantOnlyInput.bind(this);
+  }
+
+  handleShowExtantOnlyInput(isExtantOnly) {
+    this.setState({
+      showExtantOnly: isExtantOnly
+    });
   }
 
   render() {
@@ -17,6 +25,7 @@ class FilterableGreatApeList extends Component {
       <div>
         <GreatApeSearchBar
           showExtantOnly={this.state.showExtantOnly}
+          onShowExtantOnlyInput={this.handleShowExtantOnlyInput}
         />
 
         <GreatApeList
