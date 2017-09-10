@@ -7,8 +7,8 @@ it('Renders with showExtantOnly checkbox', () => {
   // Arrange
   const renderer = new ShallowRenderer();
   renderer.render(<GreatApeSearchBar
-    showExtantOnly="true"
-    onShowExtantOnlyInput="() => {}" />);
+    showExtantOnly={true}
+    onShowExtantOnlyInput={() => {}} />);
 
   // Act
   const component = renderer.getRenderOutput();
@@ -18,7 +18,7 @@ it('Renders with showExtantOnly checkbox', () => {
   expect(checkbox.type).toBe('input');
   expect(checkbox.props.id).toBe('showExtantOnly');
   expect(checkbox.props.type).toBe('checkbox');
-  expect(checkbox.props.checked).toBe('true');
+  expect(checkbox.props.checked).toBe(true);
   expect(checkbox.props.onChange).toBeDefined();
 });
 
@@ -29,7 +29,7 @@ it('Sets onChange event in showExtantOnly', () => {
 
   const renderer = new ShallowRenderer();
   renderer.render(<GreatApeSearchBar
-    showExtantOnly="true"
+    showExtantOnly={true}
     onShowExtantOnlyInput={onChange} />);
 
   // Act
@@ -45,7 +45,7 @@ it('Sets onChange event in showExtantOnly', () => {
 it('Renders with showExtantOnly label', () => {
   // Arrange
   const renderer = new ShallowRenderer();
-  renderer.render(<GreatApeSearchBar showExtantOnly="true" />);
+  renderer.render(<GreatApeSearchBar showExtantOnly={true} />);
 
   // Act
   const component = renderer.getRenderOutput();

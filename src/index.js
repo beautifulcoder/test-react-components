@@ -4,7 +4,8 @@ import './index.css';
 import FilterableGreatApeList from './FilterableGreatApeList';
 import registerServiceWorker from './registerServiceWorker';
 
-const APES = [];
+const APES = [{ name: 'Australopithecus afarensis', isExtant: false },
+  { name: 'Orangutan', isExtant: true }];
 
 ReactDOM.render(<FilterableGreatApeList apes={APES} />, document.getElementById('root'));
 registerServiceWorker();
