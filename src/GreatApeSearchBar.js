@@ -15,13 +15,13 @@ class GreatApeSearchBar extends Component {
     return(
       <form>
         <input
-          id="showExtantOnly"
+          id="GreatApeSearchBar-showExtantOnly"
           type="checkbox"
           checked={this.props.showExtantOnly}
           onChange={this.handleShowExtantOnlyChange}
         />
 
-        <label htmlFor="showExtantOnly">Only show extant species</label>
+        <label htmlFor="GreatApeSearchBar-showExtantOnly">Only show extant species</label>
       </form>
     );
   }

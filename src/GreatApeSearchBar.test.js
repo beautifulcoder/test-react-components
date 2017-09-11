@@ -16,7 +16,7 @@ it('Renders with showExtantOnly checkbox', () => {
 
   // Assert
   expect(checkbox.type).toBe('input');
-  expect(checkbox.props.id).toBe('showExtantOnly');
+  expect(checkbox.props.id).toBe('GreatApeSearchBar-showExtantOnly');
   expect(checkbox.props.type).toBe('checkbox');
   expect(checkbox.props.checked).toBe(true);
   expect(checkbox.props.onChange).toBeDefined();
@@ -53,5 +53,5 @@ it('Renders with showExtantOnly label', () => {
 
   // Assert
   expect(label.type).toBe('label');
-  expect(label.props.htmlFor).toBe('showExtantOnly');
+  expect(label.props.htmlFor).toBe('GreatApeSearchBar-showExtantOnly');
 });
